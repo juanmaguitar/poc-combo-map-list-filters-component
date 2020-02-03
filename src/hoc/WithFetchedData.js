@@ -11,8 +11,18 @@ const WithFetchedData = BaseComponent => props => {
     axios.get(baseUrl).then(setData)
   }, [])
 
+  const normalizedData = data && data.map(shipment => {
+    const {Latitude: latitude, Longitude: longitude, ...props} = shipment
+    return {
+      latitude,
+      longitude,
+      ...props
+    };
+  })
+  
+
   return (
-    <BaseComponent data={data} initialMapValues={initialMapValues}/>
+    <BaseComponent data={normalizedData} initialMapValues={initialMapValues}/>
   )
   
 }

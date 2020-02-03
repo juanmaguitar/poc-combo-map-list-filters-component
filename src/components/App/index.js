@@ -7,14 +7,6 @@ import './index.css'
 
 
 
-const normalizedData = shipments.map(shipment => {
-  const {Latitude: latitude, Longitude: longitude, ...props} = shipment
-  return {
-    latitude,
-    longitude,
-    ...props
-  };
-})
 
 
 function App() {
