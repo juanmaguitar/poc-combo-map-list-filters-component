@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://",
+  "initialMapValues": {
+    "latitude": 51.505,
+    "longitude": -0.09,
+    "zoom": 13
+  }
+}

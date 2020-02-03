@@ -6,6 +6,8 @@ import Table from '../Table/'
 
 import _ from 'lodash'
 
+import WithFetchedData = '../../hoc/WithFetchedData'
+
 const ComboMapListFilters = ({data: dataFromProps, initialMapValues}) => {
 
   const initialFilters = {
@@ -13,7 +15,6 @@ const ComboMapListFilters = ({data: dataFromProps, initialMapValues}) => {
     region: null,
     ETA: null,
     ETD: null
-    
   }
 
   const [filters, setFilters] = useState(initialFilters)
@@ -68,5 +69,5 @@ const ComboMapListFilters = ({data: dataFromProps, initialMapValues}) => {
   );
 }
 
-
-export default ComboMapListFilters;
+export {ComboMapListFilters}
+export default WithFetchedData(ComboMapListFilters);

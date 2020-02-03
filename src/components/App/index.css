@@ -4,9 +4,3 @@
   border: '1px solid black';
   display: flex;
 }
-
-.map {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 70%;
-}
